@@ -1,0 +1,24 @@
+
+
+
+<nav aria-label="Page navigation example" id="paginationNav">
+    <ul class="pagination">
+      
+      <% ['#', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'].forEach(function(letter) { %>
+        <li class="page-item"><a class="page-link" href="?page=<%= letter %>"><%= letter %></a></li>
+      <% }); %>
+      
+    </ul>
+  </nav>
+
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <% if(page > 1) { %>
+        <li class="page-item"><a class="page-link" href="?page=<%= letter %>&pageNumber=<%= page - 1 %>&pageSize=<%= size %>">Previous</a></li>
+      <% } %>
+      <!-- Dynamically generate page numbers based on total results if possible -->
+      <li class="page-item"><a class="page-link" href="?page=<%= letter %>&pageNumber=<%= page + 1 %>&pageSize=<%= size %>">Next</a></li>
+    </ul>
+  </nav>
+  

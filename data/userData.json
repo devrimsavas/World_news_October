@@ -1,0 +1,132 @@
+[
+  {
+    "userId": "exampleUserId1",
+    "newsItems": [
+      {
+        "title": "Sample News Title 1",
+        "link": "https://example.com/news1",
+        "date": "2022-01-01"
+      }
+    ]
+  },
+  {
+    "userId": "exampleUserId2",
+    "newsItems": [
+      {
+        "title": "Sample News Title 2",
+        "link": "https://example.com/news2",
+        "date": "2022-02-02"
+      }
+    ]
+  },
+  {
+    "userId": "google-oauth2|108506928322755782394",
+    "newsItems": [
+      {
+        "title": "”Slow TV” ”Slow TV” gives a unique experience the feeling of being present in real time and space In Norway “slow TV” “saktetv” has become a natural part of the vocabulary after NRK started this kind of television",
+        "link": "https://www.nrk.no/presse/slow-tv-1.12057032",
+        "date": "2024-04-07"
+      },
+      {
+        "title": "NORWAY",
+        "link": "https://www.euronews.com/news/europe/norway",
+        "date": "2024-04-07"
+      },
+      {
+        "title": "Norway follows Denmark with plans to conscript thousands more soldiers",
+        "link": "https://www.euronews.com/2024/04/02/norway-follows-denmark-with-plans-to-conscript-thousands-more-soldiers",
+        "date": "2024-04-07"
+      },
+      {
+        "title": "Norway seeks to boost military numbers through increase in conscripted soldiers",
+        "link": "https://www.foxnews.com/world/norway-seeks-boost-military-numbers-increase-conscripted-soldiers",
+        "date": "2024-04-07"
+      }
+    ]
+  },
+  {
+    "userId": "google-oauth2|111263118790796058589",
+    "newsItems": [
+      {
+        "title": "What shapes Turkeys mu­nic­i­pal elec­tions",
+        "link": "https://www.aljazeera.com/program/inside-story/2024/3/30/what-shapes-turkeys-municipal-elections",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkish opposition stuns Erdogan with local elections win President Erdogan fails to regain Turkeys big cities that he lost five years ago 1 hr ago Europe",
+        "link": "https://www.bbc.com/news/world-europe-68704375",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkeys opposition sees massive gains in urban areas in blow to president",
+        "link": "https://www.foxnews.com/world/turkeys-erdogan-suffers-setback-opposition-sees-massive-gains-urban-areas",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkeys op­po­si­tion ap­pears set to re­tain pow­er in ma­jor cities",
+        "link": "https://www.aljazeera.com/news/2024/3/31/turkeys-opposition-set-to-hold-power-in-major-cities-partial-results-show",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkeys Erdogan suffers setback after opposition sees massive gains in urban areas",
+        "link": "https://www.foxnews.com/world/turkeys-erdogan-suffers-setback-opposition-sees-massive-gains-urban-areas",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkeys Erdogan offers to host UkraineRussia peace talks",
+        "link": "https://www.euronews.com/2024/03/09/zelenskyy-declines-turkeys-offer-to-host-peace-talks-with-russia",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkey Welcomes Judo To Antalya",
+        "link": "https://www.euronews.com/2024/03/29/turkey-welcomes-judo-to-antalya",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkey Polls close in Erdogans last election",
+        "link": "https://www.dw.com/en/turkey-polls-close-in-erdogans-last-election/a-68684188",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Turkey local election Opposition CHP leading in key cities",
+        "link": "https://www.dw.com/en/turkey-local-election-opposition-chp-leading-in-key-cities/a-68709807",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "The race is on for key cities as Turkey holds local elections",
+        "link": "https://www.euronews.com/2024/03/31/the-race-is-on-for-key-cities-as-turkey-holds-local-elections",
+        "date": "2024-04-01"
+      },
+      {
+        "title": "Norway follows Denmark with plans to conscript thousands more soldiers",
+        "link": "https://www.euronews.com/2024/04/02/norway-follows-denmark-with-plans-to-conscript-thousands-more-soldiers",
+        "date": "2024-04-02"
+      },
+      {
+        "title": "Norway seeks to boost military numbers through increase in conscripted soldiers",
+        "link": "https://www.foxnews.com/world/norway-seeks-boost-military-numbers-increase-conscripted-soldiers",
+        "date": "2024-04-02"
+      }
+    ]
+  },
+  {
+    "userId": "google-oauth2|105803846344249234064",
+    "newsItems": [
+      {
+        "title": "Turkeys Erdogan faces uncertain future after shock election losses expert says",
+        "link": "https://www.foxnews.com/world/turkeys-erdogan-faces-uncertain-future-shock-election-losses-expert-says",
+        "date": "2024-04-16"
+      },
+      {
+        "title": "Jobb i NRK",
+        "link": "https://info.nrk.no/stilling/",
+        "date": "2024-04-16"
+      },
+      {
+        "title": "Rising number of workers depend on side jobs",
+        "link": "https://www.foxbusiness.com/personal-finance/us-workers-depend-on-side-jobs",
+        "date": "2024-04-16"
+      }
+    ]
+  }
+]

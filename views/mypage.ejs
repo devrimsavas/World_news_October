@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <%- include('partials/header.ejs') %> <!-- Bootstrap is included here -->
+    <link rel="stylesheet" href="/stylesheets/userstyle.css">
+    <link rel="stylesheet" href="/stylesheets/styleall.css">
+    
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>   
+
+    <div class="container-fluid mt-1">
+        <div class="user-page-main-body">
+            <div class="row">
+                <!-- User photo section -->
+                <div class="col-md-2 d-flex align-items-center justify-content-center">
+                    <% if (user.picture) { %>
+                        <img src="<%= user.picture %>" alt="User profile picture" class="img-fluid rounded-circle" style="max-width: 120px; max-height: 120px;">
+                    <% } %>
+                </div>
+                
+                <!-- User details section -->
+                <div class="col-md-10">
+                    <h1>Welcome, <%= user.given_name %></h1>
+                    <div class="user-details">
+                        <p><strong>Nickname:</strong> <%= user.nickname %></p>
+                        <p><strong>Email:</strong> <%= user.email %></p>
+                        <!-- Add more user details here -->
+                    </div>
+
+                    <!-- Placeholder for future news table -->
+                    
+                </div>
+                <!--User news table-->
+                <div class="user-news-table  mb-3">
+
+                    <div class="container-fluid d-flex  justify-content-between mb-2 deleteselectednews">
+                        <h2 >My News</h2>
+                        <button class="btn btn-danger " id="deletenewsbutton" name="deletenewsbutton">Delete Selected News </button>
+                    </div>
+                    
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Link</th>
+                                <th scope="col">Date</th>
+                                
+                            </tr>
+                        </thead>
+                        <!--dynamaically displaying the table-->
+                        <tbody>
+                            <% newsItems.forEach(function(newsItem, index) { %>
+                            <tr class="userTableRow">
+                                <th scope="row"><%= index + 1 %></th>
+                                <td><%= newsItem.title %></td>
+                                <td><a href="<%= newsItem.link %>" target="_blank">Read More</a></td>
+                                <td><%= newsItem.date %></td>
+                            </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>               
+                <!--table ends here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.user-news-table').on('dblclick', '.userTableRow', function() {
+                // Toggle the 'selecteduserrow' class on double-click
+                $(this).toggleClass('selecteduserrow');
+            });
+    
+            $('#deletenewsbutton').click(function() {
+                // Iterate over selected rows and perform deletion logic
+                $('.selecteduserrow').each(function() {
+                    // Here, you can get the index or any identifying data of the row to delete
+                    // For example, if you're using the first cell to store an ID or index:
+                    var rowIndex = $(this).find('th:first').text(); // Assuming the first 'th' contains an identifier
+                    var rowText=$(this).find('td:first').text();
+                    var newsLink=$(this).find('td a').attr('href');
+                    console.log("Deleting row with index:", rowIndex);
+                    console.log("Deleting row with text:", rowText);
+                    console.log("Deleting row with link:", newsLink);
+    
+                    $.ajax({
+                        url:'/mypage/deleteNews',
+                        type:'POST',
+                        contentType: 'application/json',
+                        data:JSON.stringify({newsLink:newsLink}),
+                        success:function(response) {
+                            alert("Successfully deleted from my news");
+                            $(this).remove();
+                            
+
+                        }.bind(this),  //Bind 'this' to maintain row context inside AJAX success callback
+                        error:function(xhr, status, error) {
+                            console.log("Error deleting from my news:", error);
+                        }
+                            
+                        
+                    });
+                });
+            });
+        });
+    </script>
+     
+
+</body>
+</html>

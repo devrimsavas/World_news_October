@@ -1,0 +1,40 @@
+
+
+
+
+<form action="/source" method="POST" id="individualSourceForm">
+    <input type="hidden" id="sourcebar" name="sourcebar">
+</form>
+
+<div class="container-fluid mt-4 d-flex justify-content-center mb-4" id="companylogos">
+    <img src="/images/bbc.png" alt="BBC" class="image-thumbnail companylogos" name="bbc" onclick="setSourceAndSubmit('https://www.bbc.com/')" >
+    <img src="/images/cnn.png" alt="CNN" class="image-thumbnail companylogos"  name="cnn" onclick="setSourceAndSubmit('https://edition.cnn.com/')">
+    <img src="/images/foxs.png" alt="Fox News" class="image-thumbnail companylogos" name="fox" onclick="setSourceAndSubmit('https://www.foxnews.com/')">
+    <img src="/images/euronews.png" alt="Euronews" class="image-thumbnail companylogos" name="euronews" onclick="setSourceAndSubmit('https://www.euronews.com/')" >
+    <img src="/images/nrk.png" alt="alarabia" class="image-thumbnail companylogos" name="nrk" onclick="setSourceAndSubmit('https://www.nrk.no/about/')">
+    <img src="/images/aljazeera.png" alt="aljazeera" class="image-thumbnail companylogos" name="aljazeera" onclick="setSourceAndSubmit('https://www.aljazeera.com/')">
+    <img src="/images/msnbc.png" alt="msnbc" class="image-thumbnail companylogos" name="msnbc" onclick="setSourceAndSubmit('https://www.msnbc.com/')">
+    <img src="/images/dw.png" alt="dw" class="image-thumbnail companylogos" name="ndtv" onclick="setSourceAndSubmit('https://www.dw.com/en/top-stories/s-9097')">
+    <img src="/images/skynews.png" alt="skynews" class="image-thumbnail companylogos" name="skynews" onclick="setSourceAndSubmit('https://news.sky.com/')">
+    <form class="form-inline " id="getAllForm" action="/allSources" method="POST">
+        <button class="btn btn-danger companylogos" type="submit" id="getAllButton" >ALL</button>
+    </form>
+</div>
+
+
+<script>
+    function setSourceAndSubmit(sourceUrl) {
+        console.log("------------------sourceUrl", sourceUrl);
+        document.getElementById('sourcebar').value = sourceUrl; // Set the input field value
+
+        //display message 
+        document.getElementById('loadingMessage').style.display = 'block';
+        document.getElementById('individualSourceForm').submit(); // Correctly submit the form
+    }
+
+        // Event listener for the "ALL" button form submission
+        document.getElementById('getAllForm').addEventListener('submit', function(event) {
+        document.getElementById('loadingMessage').style.display = 'block'; // Display loading message
+    });
+  </script>
+  

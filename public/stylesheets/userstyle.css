@@ -1,0 +1,41 @@
+
+
+body {
+    background-color: #f8f9fa;
+}
+.user-page-main-body {
+    margin: auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 0px;
+    background-color: #fffef6; /* Ensure background contrast */
+}
+
+/* Additional styling can go here */
+
+.userTable {
+    width:80%;
+    margin:auto;
+}
+
+
+.userTableRow, td:hover {
+    background-color: rgb(9, 243, 72) !important;
+    cursor: pointer;
+    transform: scale(1.011);
+    transition: transform 0.2s ease-in-out;
+    
+}
+
+.deleteselectednews {
+    width:99%;
+    margin:auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.selecteduserrow td {
+    background-color: rgb(255, 0, 30) !important;
+    color:beige;
+
+}
+
